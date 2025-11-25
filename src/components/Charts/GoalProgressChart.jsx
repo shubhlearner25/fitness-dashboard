@@ -34,11 +34,11 @@ export default function GoalProgressChart() {
       {/* CHART BOX */}
       <div className="w-full h-[260px] sm:h-[320px]">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart
-            data={data}
-            barGap={5}                // spacing between workout / calories / steps
-            barCategoryGap="50%"     // spacing between day groups
-          >
+        <BarChart
+  data={data}
+  barGap={12}          // more space between bars in a day
+  barCategoryGap="60%" // more space between days
+>
 
             <CartesianGrid
               strokeDasharray="3 3"
