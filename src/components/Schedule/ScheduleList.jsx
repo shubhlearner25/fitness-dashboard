@@ -1,4 +1,7 @@
 import React from "react";
+import stretchImg from "../../assets/stretch.png";
+import backImg from "../../assets/back.png";
+import yogaImg from "../../assets/yoga.png";
 
 const items = [
   {
@@ -6,38 +9,27 @@ const items = [
     title: "Stretch",
     time: "08:00 AM",
     badge: "20 Sets",
-    img: "/src/assets/stretch.png",
+    img: stretchImg,
   },
   {
     day: "Tuesday",
     title: "Back Stretch",
     time: "08:00 AM",
     badge: "10 Round",
-    img: "/src/assets/back.png",
+    img: backImg,
   },
   {
     day: "Wednesday",
     title: "Yoga",
     time: "08:00 AM",
     badge: "20 min",
-    img: "/src/assets/yoga.png",
+    img: yogaImg,
   },
 ];
 
 export default function ScheduleList() {
   return (
-    <div
-      className="
-        bg-white 
-        p-4 
-        rounded-2xl 
-        shadow-sm 
-        font-[Manrope]
-
-        w-full          /* Full width on all screens */
-        sm:w-auto       /* Auto width on larger screens */
-      "
-    >
+    <div className="bg-white p-4 rounded-2xl shadow-sm font-[Manrope] w-full sm:w-auto">
       <div className="flex justify-between items-center mb-4">
         <h3 className="font-semibold">My Schedule</h3>
         <a className="text-sm text-orange-500 cursor-pointer">View All</a>
@@ -47,12 +39,7 @@ export default function ScheduleList() {
         {items.map((i) => (
           <div
             key={i.day}
-            className="
-              flex items-center justify-between 
-              p-4 bg-gray-50 rounded-xl
-
-              gap-4       /* Better spacing on mobile */
-            "
+            className="flex items-center justify-between p-4 bg-gray-50 rounded-xl gap-4"
           >
             <div className="flex-1 min-w-0">
               <div className="font-semibold mb-1">{i.day}</div>
@@ -71,17 +58,7 @@ export default function ScheduleList() {
               </div>
             </div>
 
-            <div
-              className="
-                bg-orange-100 
-                px-3 py-1 
-                rounded-full 
-                text-orange-600 
-                text-sm 
-                font-medium
-                whitespace-nowrap    /* Keeps badge in one line */
-              "
-            >
+            <div className="bg-orange-100 px-3 py-1 rounded-full text-orange-600 text-sm font-medium whitespace-nowrap">
               {i.badge}
             </div>
           </div>

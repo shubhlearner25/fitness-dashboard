@@ -1,6 +1,7 @@
 import React from "react";
 import { Search, Bell } from "lucide-react";
 import { CiSettings } from "react-icons/ci";
+import profileImg from "../../assets/profile.jpg"; // imported image
 
 export default function Navbar() {
   return (
@@ -21,12 +22,12 @@ export default function Navbar() {
         </div>
 
         <Bell size={22} className="text-gray-500 cursor-pointer" />
-                <CiSettings size={24} className="text-gray-500 cursor-pointer" />
-
+        <CiSettings size={24} className="text-gray-500 cursor-pointer" />
 
         <img
-          src="/src/assets/profile.jpg"
+          src={profileImg}
           className="w-10 h-10 rounded-full object-cover"
+          alt="Profile"
         />
       </div>
     </div>
