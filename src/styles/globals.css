@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* load font (requires internet) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
+:root{
+  --bg: #F3F6FA;
+  --card-shadow: 0 12px 30px rgba(16,24,40,0.06);
+}
+
+html,body,#root { height: 100%; }
+body {
+  @apply bg-[color:var(--bg)] text-gray-700;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* helper card */
+.card { box-shadow: var(--card-shadow); border-radius: 14px; }
+
+/* exact small pill */
+.pill { background: linear-gradient(180deg, rgba(255,127,39,0.08), rgba(255,127,39,0.03)); color: #FF7A1A; padding: 6px 12px; border-radius: 9999px; font-weight:600; font-size:13px; }
+
+/* hero gradient */
+.hero-gradient {
+  background: linear-gradient(90deg, #FF7A1A 0%, #FF9238 50%, rgba(255,154,77,0.6) 100%);
+  border-radius: 14px;
+}
+
+/* stat small inner rounded rect */
+.stat-inner { background: rgba(255,255,255,0.12); border-radius: 10px; height: 44px; }
+
+/* subtle dotted grid for chart area */
+.chart-grid { background: linear-gradient(#fff, #fff); border-radius: 14px; }
